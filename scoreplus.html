@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적 계산기.ver2</title>
+    <script>
+
+        function input(){
+            document.getElementById('a').value = "";
+            document.getElementById('1').value = "";
+            document.getElementById('2').value = "";
+            document.getElementById('3').value = "";
+            document.getElementById('4').value = "";
+            document.getElementById('5').value = "";
+            document.getElementById('6').value = "";
+            document.getElementById('7').value = "";
+            document.getElementById('8').value = "";
+            document.getElementById('9').value = "";
+            document.getElementById('10').value = "";
+            document.getElementById('eee').value = "";
+            document.getElementById('rrr').value = "";
+        }
+
+        function cal(){
+            var adata = document.getElementById("a").value;
+            var qdata = document.getElementById("1").value;
+            var wdata = document.getElementById("2").value;
+            var edata = document.getElementById("3").value;
+            var rdata = document.getElementById("4").value;
+            var tdata = document.getElementById("5").value;
+            var ydata = document.getElementById("6").value;
+            var udata = document.getElementById("7").value;
+            var idata = document.getElementById("8").value;
+            var odata = document.getElementById("9").value;
+            var pdata = document.getElementById("10").value;
+            var edata = parseFloat(qdata) + parseFloat(wdata) + parseFloat(edata) + parseFloat(rdata) + parseFloat(tdata) + parseFloat(ydata) + parseFloat(udata) + parseFloat(idata) + parseFloat(odata) + parseFloat(pdata);
+            var rdata = (edata / adata).toFixed(2);
+            document.getElementById("eee").value = edata;
+            document.getElementById("rrr").value = rdata;
+        }
+    </script>
+</head>
+<body>
+    <h1>성적 계산기</h1>
+    <p>주의: 과목 1~10 에는 <strong>무조건</strong> 숫자를 입력해주세요(0이라도 입력)</p>
+
+    과목 수 <input type="text" id="a">
+    <br>
+    과목1 <input type="text" id="1">
+    <br>
+    과목2 <input type="text" id="2">
+    <br>
+    과목3 <input type="text" id="3">
+    <br>
+    과목4 <input type="text" id="4">
+    <br>
+    과목5 <input type="text" id="5">
+    <br>
+    과목6 <input type="text" id="6">
+    <br>
+    과목7 <input type="text" id="7">
+    <br>
+    과목8 <input type="text" id="8">
+    <br>
+    과목9 <input type="text" id="9">
+    <br>
+    과목10 <input type="text" id="10">
+    <br><br>
+    합계 <input type="text" id="eee">
+    <br>
+    평균 <input type="text" id="rrr">
+    <br><br><br>
+    <input type="button" value="초기화" onclick="input()">
+    <input type="button" value="실행" onclick="cal()">
+</body>
+</html>
